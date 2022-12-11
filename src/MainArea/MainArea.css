@@ -1,0 +1,115 @@
+.MainArea{
+    display: flex;
+    justify-content: space-between;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+}
+
+.SideBar{
+    display: grid;
+    position: fixed;
+    width: 17%;
+    max-height: calc(100vh - 9rem);
+    overflow-y: hidden;
+}
+.SideBar:hover{
+    overflow-y: auto;
+}
+
+.Quick_Icon{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin:7px;
+}
+.Quick_Icon:hover{
+    cursor: pointer;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+}
+.Quick_Icon>div{
+    padding: 0 12px;
+}
+.explore,.more_from_metube{
+    margin-left: 5px;
+    font-weight: 410;
+    font-size: 1.4rem;
+}
+
+.SideBar>div{
+    height: auto;
+}
+
+.Home,.Library,.Explore{
+    border-bottom: 1px gray solid;
+}
+
+/* ScrollBar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+     
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ACACAC; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: none; 
+  }
+
+/* Main */
+
+.Main{
+    display: flex;
+    justify-content: flex-start;
+    background-color: none;
+    width: 83%;
+    height: 60rem;
+    margin-left: 18%;
+}
+
+.Logo{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 0px;
+}
+
+img{
+    padding: 0 10px 0 4px;
+}
+
+.view{
+    margin: 0 0 0 50px;
+    font-size: 0.8rem;
+    color: #ACACAC;
+    font-weight: 400;
+}
+.more{
+    margin-right: 0;
+    margin-left: auto;
+    color: white;
+    
+}
+.more:hover{
+    color:black;
+    cursor: pointer;
+}
+
+.Videos{
+    display: flex;
+    justify-content:space-around;
+}
+.Video{
+    margin: 20px;
+}
+
+  
+
+
+
+
