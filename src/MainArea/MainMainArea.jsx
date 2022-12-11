@@ -14,7 +14,7 @@ const RecommendedVideos = () => {
 
     useEffect(() => {
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=US&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=IN&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
         .then(response => {
           console.log(response.data.items)
           createVideoCards(response.data.items);
@@ -31,7 +31,10 @@ const RecommendedVideos = () => {
         const videoId = video.id;
         const snippet = video.snippet;
         const channelId = snippet.channelId;
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+        const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`);
+        console.log(response);
+        console.log(snippet);
+        console.log(video);
         const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
 
         const title = snippet.title;
