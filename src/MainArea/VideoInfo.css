@@ -1,0 +1,47 @@
+.channelInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoinfo__channel{
+    display: flex;
+    justify-items: flex-start;
+}
+
+.videoinfo__likes{
+    display: flex;
+    justify-content:space-around;
+}
+
+.partIcon{
+    border-radius: 10px;
+    background-color: lightgray;
+    justify-content:space-between;
+    margin: 10px;
+}
+
+.icons{
+    display: flex;
+
+    width: auto;
+    height:auto;
+    padding: 5px 5px;
+}
+.videoinfo__subscribe{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    height :2rem;
+    width:6rem;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.videoinfo__subscribe:hover{
+    transform: scale(1.2);
+    cursor:pointer;
+}
+.videoinfo__subscribe{
+    color: aliceblue;
+    font-weight: 500;
+}

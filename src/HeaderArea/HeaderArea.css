@@ -12,6 +12,10 @@
     height: 6rem;
 
 }
+.MeTube{
+    text-decoration: none;
+    color: black;
+}
 
 .header{
     display: flex;
@@ -27,9 +31,10 @@
     display: flex;
     align-items: center;
     margin:10px;
+    padding: 5px;
 }
-.Icon div{
-    padding: 0 7px;
+.icon{
+    padding: 10px;
 }
 
 .Search{
@@ -39,6 +44,13 @@
 }
 .Search input{
     font-size: 1rem;
+    
+
+}
+.search:hover{
+    cursor: pointer;
+    background-color: #D7D7D7;
+
 }
 .icon:hover{
     border-radius: 30px;
@@ -59,10 +71,12 @@ button{
     height:2.4rem;
     width: 2.7rem;
     border-radius: 0 30px 30px 0;
-    border: solid 1px #D7D7D7
-    ;
+    border: solid 1px #D7D7D7;
     padding-top: 7px;
     padding-left: 5px;
+}
+.linkText{
+    color: black;
 }
 
 input[type='search']{
@@ -70,5 +84,6 @@ input[type='search']{
     width: 30rem;
     border-radius: 30px 0 0 30px;
     border:1px solid #D7D7D7;
+    padding-left: 20px;
 
 }

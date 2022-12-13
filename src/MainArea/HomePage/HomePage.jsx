@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Video from './Video';
-import './RecommendedVideos.css';
+import Video from '../SingleVideo/Video';
+import './HomePage.css';
 import axios from 'axios';
 import {DateTime} from 'luxon';
 import {CircularProgress,Alert} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const RecommendedVideos = () => {
@@ -14,9 +15,8 @@ const RecommendedVideos = () => {
 
     useEffect(() => {
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=IN&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=CA&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
         .then(response => {
-          console.log(response.data.items)
           createVideoCards(response.data.items);
         })
         .catch(error => {
@@ -32,9 +32,6 @@ const RecommendedVideos = () => {
         const snippet = video.snippet;
         const channelId = snippet.channelId;
         const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`);
-        console.log(response);
-        console.log(snippet);
-        console.log(video);
         const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
 
         const title = snippet.title;
@@ -68,6 +65,7 @@ const RecommendedVideos = () => {
                 {
                   videoCards.map(item => {
                     return (
+                      <Link className='eachVideo' key={item.videoId} to={`/video/${item.videoId}`}>
                         <Video key={item.videoId}
                             title={item.title}
                             image={item.image}
@@ -76,6 +74,7 @@ const RecommendedVideos = () => {
                             channel={item.channel}
                             channelImage={item.channelImage}
                         />
+                        </Link>
                     )
                   })
                 }

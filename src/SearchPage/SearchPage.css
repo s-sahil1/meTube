@@ -1,0 +1,6 @@
+.searchvideos{
+    display: flex;
+    justify-content: flex-start;
+    width: 83%;
+    padding-left: 17%;
+}

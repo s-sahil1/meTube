@@ -1,0 +1,16 @@
+.videoplayer{
+    display: flex;
+
+}
+.videoplayer__videodetails{
+    width: 70%;
+    margin-left: 5%;
+}
+
+.videoplayer__suggested{
+    width: 20%;
+}
+
+.videoplayer__videoinfo{
+    margin-left: 2%;
+}

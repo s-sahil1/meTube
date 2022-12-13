@@ -15,6 +15,10 @@
 .SideBar:hover{
     overflow-y: auto;
 }
+.homeLink{
+    color: black;
+    text-decoration: none;
+}
 
 .Quick_Icon{
     display: flex;
